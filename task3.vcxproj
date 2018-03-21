@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7F423EF2-3BFF-4AE4-9043-4315CD8DBA20}</ProjectGuid>
+    <RootNamespace>task3</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)</OutDir>
+    <TargetName>$(ProjectName)_D</TargetName>
+    <IncludePath>$(SolutionDir)External;$(SolutionDir)Include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)</OutDir>
+    <TargetName>$(ProjectName)_R</TargetName>
+    <IncludePath>$(SolutionDir)External;$(SolutionDir)Include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="External\glad.c" />
+    <ClCompile Include="External\stb\stb_image.cpp" />
+    <ClCompile Include="Src\Camera.cpp" />
+    <ClCompile Include="Src\Light.cpp" />
+    <ClCompile Include="Src\main.cpp" />
+    <ClCompile Include="Src\Shader.cpp" />
+    <ClCompile Include="Src\Texture.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="External\glad.h" />
+    <ClInclude Include="External\glfw3.h" />
+    <ClInclude Include="External\glfw3native.h" />
+    <ClInclude Include="External\glm\common.hpp" />
+    <ClInclude Include="External\glm\exponential.hpp" />
+    <ClInclude Include="External\glm\ext.hpp" />
+    <ClInclude Include="External\glm\fwd.hpp" />
+    <ClInclude Include="External\glm\geometric.hpp" />
+    <ClInclude Include="External\glm\glm.hpp" />
+    <ClInclude Include="External\glm\gtc\bitfield.hpp" />
+    <ClInclude Include="External\glm\gtc\color_space.hpp" />
+    <ClInclude Include="External\glm\gtc\constants.hpp" />
+    <ClInclude Include="External\glm\gtc\epsilon.hpp" />
+    <ClInclude Include="External\glm\gtc\integer.hpp" />
+    <ClInclude Include="External\glm\gtc\matrix_access.hpp" />
+    <ClInclude Include="External\glm\gtc\matrix_integer.hpp" />
+    <ClInclude Include="External\glm\gtc\matrix_inverse.hpp" />
+    <ClInclude Include="External\glm\gtc\matrix_transform.hpp" />
+    <ClInclude Include="External\glm\gtc\noise.hpp" />
+    <ClInclude Include="External\glm\gtc\packing.hpp" />
+    <ClInclude Include="External\glm\gtc\quaternion.hpp" />
+    <ClInclude Include="External\glm\gtc\random.hpp" />
+    <ClInclude Include="External\glm\gtc\reciprocal.hpp" />
+    <ClInclude Include="External\glm\gtc\round.hpp" />
+    <ClInclude Include="External\glm\gtc\type_aligned.hpp" />
+    <ClInclude Include="External\glm\gtc\type_precision.hpp" />
+    <ClInclude Include="External\glm\gtc\type_ptr.hpp" />
+    <ClInclude Include="External\glm\gtc\ulp.hpp" />
+    <ClInclude Include="External\glm\gtc\vec1.hpp" />
+    <ClInclude Include="External\glm\integer.hpp" />
+    <ClInclude Include="External\glm\mat2x2.hpp" />
+    <ClInclude Include="External\glm\mat2x3.hpp" />
+    <ClInclude Include="External\glm\mat2x4.hpp" />
+    <ClInclude Include="External\glm\mat3x2.hpp" />
+    <ClInclude Include="External\glm\mat3x3.hpp" />
+    <ClInclude Include="External\glm\mat3x4.hpp" />
+    <ClInclude Include="External\glm\mat4x2.hpp" />
+    <ClInclude Include="External\glm\mat4x3.hpp" />
+    <ClInclude Include="External\glm\mat4x4.hpp" />
+    <ClInclude Include="External\glm\matrix.hpp" />
+    <ClInclude Include="External\glm\packing.hpp" />
+    <ClInclude Include="External\glm\trigonometric.hpp" />
+    <ClInclude Include="External\glm\vec2.hpp" />
+    <ClInclude Include="External\glm\vec3.hpp" />
+    <ClInclude Include="External\glm\vec4.hpp" />
+    <ClInclude Include="External\glm\vector_relational.hpp" />
+    <ClInclude Include="External\stb\stb_image.h" />
+    <ClInclude Include="Include\Camera.h" />
+    <ClInclude Include="Include\Light.h" />
+    <ClInclude Include="Include\Shader.h" />
+    <ClInclude Include="Include\Texture.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="External\glfw3.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="External\glm\gtc\bitfield.inl" />
+    <None Include="External\glm\gtc\color_space.inl" />
+    <None Include="External\glm\gtc\constants.inl" />
+    <None Include="External\glm\gtc\epsilon.inl" />
+    <None Include="External\glm\gtc\integer.inl" />
+    <None Include="External\glm\gtc\matrix_access.inl" />
+    <None Include="External\glm\gtc\matrix_inverse.inl" />
+    <None Include="External\glm\gtc\matrix_transform.inl" />
+    <None Include="External\glm\gtc\noise.inl" />
+    <None Include="External\glm\gtc\packing.inl" />
+    <None Include="External\glm\gtc\quaternion.inl" />
+    <None Include="External\glm\gtc\quaternion_simd.inl" />
+    <None Include="External\glm\gtc\random.inl" />
+    <None Include="External\glm\gtc\reciprocal.inl" />
+    <None Include="External\glm\gtc\round.inl" />
+    <None Include="External\glm\gtc\type_precision.inl" />
+    <None Include="External\glm\gtc\type_ptr.inl" />
+    <None Include="External\glm\gtc\ulp.inl" />
+    <None Include="External\glm\gtc\vec1.inl" />
+    <None Include="res\shader\DrawCube.fs" />
+    <None Include="res\shader\DrawCube.vs" />
+    <None Include="res\shader\DrawLamp.fs" />
+    <None Include="res\shader\DrawLamp.vs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\texture\container2.png" />
+    <Image Include="res\texture\container2_specular.png" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
