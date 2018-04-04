@@ -1,8 +1,8 @@
 #ifndef __TEXTURE_H__
 #define __TEXTURE_H__
 
-#include "stb/stb_image.h"
-#include "glad.h"
+#include "stb_image.h"
+#include "glad/glad.h"
 
 class Texture
 {
